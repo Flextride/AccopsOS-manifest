@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Default remote -->
+  <remote name="github" fetch="https://github.com"/>
+
+  <!-- Yocto layers (Styhead) -->
+  <project name="yoctoproject/poky"
+           path="poky"
+           revision="styhead"/>
+
+  <project name="yoctoproject/meta-openembedded"
+           path="meta-openembedded"
+           revision="styhead"/>
+
+  <project name="rauc/meta-rauc"
+           path="meta-rauc"
+           revision="styhead"/>
+
+  <project name="linuxfoundation/meta-security"
+           path="meta-security"
+           revision="styhead"/>
+
+  <project name="linuxfoundation/meta-virtualization"
+           path="meta-virtualization"
+           revision="styhead"/>
+
+  <!-- Accops Layers -->
+  <project name="pankaj9730/meta-accopsOS"
+           path="meta-accopsOS"
+           revision="master"/>
+
+  <project name="pankaj9730/meta-accopspkgs"
+           path="meta-accopspkgs"
+           revision="master"/>
+
+</manifest>
+
