@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!-- Define GitHub as the default remote -->
+  <!-- Yocto upstream servers -->
+  <remote name="yocto" fetch="https://git.yoctoproject.org"/>
+  <remote name="oe" fetch="https://git.openembedded.org"/>
   <remote name="github" fetch="https://github.com"/>
 
-  <!-- Mandatory default element -->
-  <default remote="github" revision="styhead"/>
+  <default remote="yocto" revision="styhead"/>
+  <!-- Poky -->
+  <project name="poky"
+           remote="yocto"
+           path="poky"
+           revision="styhead"/>
 
-  <!-- Yocto layers -->
-  <project name="yoctoproject/poky"
-           path="poky"/>
+  <!-- Meta-openembedded -->
+  <project name="meta-openembedded"
+           remote="oe"
+           path="meta-openembedded"
+           revision="styhead"/>
 
-  <project name="yoctoproject/meta-openembedded"
-           path="meta-openembedded"/>
+  <!-- Security layer -->
+  <project name="meta-security"
+           remote="yocto"
+           path="meta-security"
+           revision="styhead"/>
 
+  <!-- Virtualization layer -->
+  <project name="meta-virtualization"
+           remote="yocto"
+           path="meta-virtualization"
+           revision="styhead"/>
+
+  <!-- RAUC (GitHub) -->
   <project name="rauc/meta-rauc"
-           path="meta-rauc"/>
+           remote="github"
+           path="meta-rauc"
+           revision="styhead"/>
 
-  <project name="linuxfoundation/meta-security"
-           path="meta-security"/>
-
-  <project name="linuxfoundation/meta-virtualization"
-           path="meta-virtualization"/>
-
-  <!-- Your private layers -->
+  <!-- Accops custom layers (private GitHub repos) -->
   <project name="pankaj9730/meta-accopsOS"
+           remote="github"
            path="meta-accopsOS"
            revision="master"/>
 
   <project name="pankaj9730/meta-accopspkgs"
+           remote="github"
            path="meta-accopspkgs"
            revision="master"/>
 
 </manifest>
-
