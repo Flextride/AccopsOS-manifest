@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <!-- Default remote -->
+  <!-- Define GitHub as the default remote -->
   <remote name="github" fetch="https://github.com"/>
 
-  <!-- Yocto layers (Styhead) -->
+  <!-- Mandatory default element -->
+  <default remote="github" revision="styhead"/>
+
+  <!-- Yocto layers -->
   <project name="yoctoproject/poky"
-           path="poky"
-           revision="styhead"/>
+           path="poky"/>
 
   <project name="yoctoproject/meta-openembedded"
-           path="meta-openembedded"
-           revision="styhead"/>
+           path="meta-openembedded"/>
 
   <project name="rauc/meta-rauc"
-           path="meta-rauc"
-           revision="styhead"/>
+           path="meta-rauc"/>
 
   <project name="linuxfoundation/meta-security"
-           path="meta-security"
-           revision="styhead"/>
+           path="meta-security"/>
 
   <project name="linuxfoundation/meta-virtualization"
-           path="meta-virtualization"
-           revision="styhead"/>
+           path="meta-virtualization"/>
 
-  <!-- Accops Layers -->
+  <!-- Your private layers -->
   <project name="pankaj9730/meta-accopsOS"
            path="meta-accopsOS"
            revision="master"/>
