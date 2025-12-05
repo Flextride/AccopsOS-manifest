@@ -38,12 +38,12 @@
            revision="styhead"/>
 
   <!-- Accops custom layers (private GitHub repos) -->
-  <project name="pankaj9730/meta-accopsOS"
+  <project name="Flextride/meta-accopsOS"
            remote="github"
            path="meta-accopsOS"
            revision="master"/>
 
-  <project name="pankaj9730/meta-accopspkgs"
+  <project name="Flextride/meta-accopspkgs"
            remote="github"
            path="meta-accopspkgs"
            revision="master"/>
