@@ -6,7 +6,9 @@
   <remote name="oe" fetch="https://git.openembedded.org"/>
   <remote name="github" fetch="https://github.com"/>
 
+  <!-- Default: Yocto styhead -->
   <default remote="yocto" revision="styhead"/>
+
   <!-- Poky -->
   <project name="poky"
            remote="yocto"
@@ -31,21 +33,29 @@
            path="meta-virtualization"
            revision="styhead"/>
 
-  <!-- RAUC (GitHub) -->
+  <!-- RAUC -->
   <project name="rauc/meta-rauc"
            remote="github"
            path="meta-rauc"
            revision="styhead"/>
 
-  <!-- Accops custom layers (private GitHub repos) -->
+  <!-- ========================= -->
+  <!-- AccopsOS RELEASED LAYERS -->
+  <!-- ========================= -->
+
   <project name="Flextride/meta-accopsOS"
            remote="github"
            path="meta-accopsOS"
-           revision="master"/>
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
 
   <project name="Flextride/meta-accopspkgs"
            remote="github"
            path="meta-accopspkgs"
-           revision="master"/>
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
+
+  <project name="Flextride/meta-accopsapps"
+           remote="github"
+           path="meta-accopsapps"
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
 
 </manifest>
