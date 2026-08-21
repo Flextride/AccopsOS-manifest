@@ -46,16 +46,16 @@
   <project name="Flextride/meta-accopsOS"
            remote="github"
            path="meta-accopsOS"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3_RC2"/>
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
 
   <project name="Flextride/meta-accopspkgs"
            remote="github"
            path="meta-accopspkgs"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3_RC2"/>
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
 
   <project name="Flextride/meta-accopsapps"
            remote="github"
            path="meta-accopsapps"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3_RC2"/>
+           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
 
 </manifest>
