@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+	<!-- Yocto upstream servers -->
+	<remote name="yocto" fetch="https://git.yoctoproject.org"/>
+	<remote name="oe" fetch="https://git.openembedded.org"/>
+	<remote name="github" fetch="https://github.com"/>
 
-  <!-- Yocto upstream servers -->
-  <remote name="yocto" fetch="https://git.yoctoproject.org"/>
-  <remote name="oe" fetch="https://git.openembedded.org"/>
-  <remote name="github" fetch="https://github.com"/>
+	<!-- ========================= -->
+	<!-- Yocto Project 6.0 Wrynose -->
+	<!-- ========================= -->
 
-  <!-- Default: Yocto styhead -->
-  <default remote="yocto" revision="styhead"/>
+	<default remote="yocto"
+		revision="wrynose"/>
 
-  <!-- Poky -->
-  <project name="poky"
-           remote="yocto"
-           path="poky"
-           revision="styhead"/>
+	<!-- BitBake -->
+	<project name="bitbake"
+		remote="oe"
+		path="bitbake"
+		revision="2.18"/>
 
-  <!-- Meta-openembedded -->
-  <project name="meta-openembedded"
-           remote="oe"
-           path="meta-openembedded"
-           revision="styhead"/>
+	<!-- OpenEmbedded-Core -->
+	<project name="openembedded-core"
+		remote="oe"
+		path="openembedded-core"
+		revision="wrynose"/>
 
-  <!-- Security layer -->
-  <project name="meta-security"
-           remote="yocto"
-           path="meta-security"
-           revision="styhead"/>
+	<!-- Yocto metadata -->
+	<project name="meta-yocto"
+		remote="yocto"
+		path="meta-yocto"
+		revision="wrynose"/>
 
-  <!-- Virtualization layer -->
-  <project name="meta-virtualization"
-           remote="yocto"
-           path="meta-virtualization"
-           revision="styhead"/>
+	<!-- Meta-openembedded -->
+	<project name="meta-openembedded"
+		remote="oe"
+		path="meta-openembedded"
+		revision="wrynose"/>
 
-  <!-- RAUC -->
-  <project name="rauc/meta-rauc"
-           remote="github"
-           path="meta-rauc"
-           revision="styhead"/>
+	<!-- Security layer -->
+	<project name="meta-security"
+		remote="yocto"
+		path="meta-security"
+		revision="wrynose"/>
 
-  <!-- ========================= -->
-  <!-- AccopsOS RELEASED LAYERS -->
-  <!-- ========================= -->
+	<!-- Virtualization layer -->
+	<project name="meta-virtualization"
+		remote="yocto"
+		path="meta-virtualization"
+		revision="wrynose"/>
 
-  <project name="Flextride/meta-accopsOS"
-           remote="github"
-           path="meta-accopsOS"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
+	<!-- RAUC -->
+	<project name="rauc/meta-rauc"
+		remote="github"
+		path="meta-rauc"
+		revision="wrynose"/>
 
-  <project name="Flextride/meta-accopspkgs"
-           remote="github"
-           path="meta-accopspkgs"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
+	<!-- ========================= -->
+	<!-- AccopsOS RELEASED LAYERS -->
+	<!-- ========================= -->
 
-  <project name="Flextride/meta-accopsapps"
-           remote="github"
-           path="meta-accopsapps"
-           revision="refs/tags/FLX_ACCOPS_OS_REL_P3"/>
+	<project name="Flextride/meta-accopsOS"
+		remote="github"
+		path="meta-accopsOS"
+		revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
+
+	<project name="Flextride/meta-accopspkgs"
+		remote="github"
+		path="meta-accopspkgs"
+		revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
+
+	<project name="Flextride/meta-accopsapps"
+		remote="github"
+		path="meta-accopsapps"
+		revision="refs/tags/FLX_ACCOPS_OS_REL_P1_1_0"/>
 
 </manifest>
